@@ -12,6 +12,14 @@ fill='x' or 'y'
 Sets how much space the widget can take up on the x or y axis
 
 
+2 kinds of padding, padx(horizontal), pady(vertikal)
+
+Create space around the widget
+
+ipadx or ipady, expands the widget
+
+
+
 '''
 
 import tkinter as tk
@@ -30,17 +38,22 @@ label3 = ttk.Label(window, text='Last of the label', background='green')
 button = ttk.Button(window, text='button')
 
 # Layout
-# label1.pack(side='top', expand=True,fill='both')
-# label2.pack(side='top', fill='y')
-# label3.pack(side='top')
-# button.pack(side='top',expand=True, fill='y')
+label1.pack(side='top', expand=True,fill='both')
+label2.pack(side='top', fill='y')
+label3.pack(side='top')
+button.pack(side='top',expand=True, fill='y')
 
 # example
 
-label1.pack(side='top', fill='x', padx=10, pady=10)
-label2.pack(side='top', expand=True, padx=10, pady=10)
-label3.pack(side='top',expand=True, fill='both', padx=10, pady=10)
-button.pack(side='top', fill='x', padx=10, pady=10)
+# label1.pack(side='left', fill='x', padx=100, pady=10)
+# label2.pack(side='top', expand=True, fill= 'both', padx=10, pady=10)
+# label3.pack(side='top',expand=True, fill='both', padx=10, pady=10)
+# button.pack(side='top', fill='x', padx=10, pady=10)
+
+# label1.pack(side='top', expand=True, fill='both', padx=10, pady=10)
+# label2.pack(side='left', expand=True, fill='both')
+# label3.pack(side='top', expand=True, fill='both')
+# button.pack(side='top', expand=True, fill='both')
 
 # run
 window.mainloop()
